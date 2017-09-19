@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+	<title>FilmFacts</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="v5_project.css" rel="stylesheet">
+</head>
+
+<body>
+	<header class="header">
+		<a class="headline" href="./index.html">FilmFacts</a> 
+		<nav class="navigation">
+			<a href="./index.html">Hjem</a>
+			<a href="./mylist.html">Min liste</a>
+			<a href="./lastborrowed.html">Mine lån</a>
+		</nav>
+		<div class="activeUser">
+			<a href="./mylist.html">Bruker 1</a>
+			<a href="#">Logg ut</a>
+		</div>
+	</header>
+
+	<section class="search">
+		<h2>Søk etter film</h2>
+		<div class="freeSearch general">
+			<form action="./searchresult.html" class="searchbox">
+				<input type="search" name="film_title">
+				<br><br>
+				<input type="submit" name="submit" value="Søk">
+			</form>
+			<a href="./advancedSearch.html">Avansert søk</a>
+		</div>
+	</section>
+
+	<div class="maincontain">
+		<main class="filmInfo">
+			<div class="trailer">
+				<!-- filmtittel -->
+				<!-- trailerkode -->
+			</div>
+
+			<section class="mainFilmInfo">
+
+
+				<div class="filmDescription">
+					<!-- tittel: kort beskrivelse-->
+					<!-- beskrivelse -->
+				</div>
+
+				<div class="factAndPics">
+					<div class="factbox">
+						<!-- Land -->
+						<!-- Språk -->
+						<!-- År -->
+						<!-- Lengde -->
+						<!-- Genre -->
+						<!-- Medvirkende -->
+					</div>
+
+					<div class="pics">
+						<div class="tallPics">
+							<!-- bilder -->
+						</div>
+					</div>
+				</div>
+
+
+				<div id="individualRating">
+				<!-- Unike brukervurderinger -->	
+				</div>
+
+				<div class="rating">
+					<!-- Gjennomsnittsvurdering -->
+					
+					<form class="formRate" action="mylist.html"> <!-- Lenker til min liste, uten å gjøre noe-->
+						<select name="rateOptions">
+							<option> 5 (Veldig bra)</option>
+							<option> 4 (Bra)</option>
+							<option> 3 (OK)</option>
+							<option> 2 (Ikke så bra)</option>
+							<option> 1 (Dårlig)</option>
+						</select>
+						<input type="submit" name="rating" value="Vurdér">
+					</form>
+
+					<form class="formtest" action="mylist.html">
+						<input type="text" name="usercomment" id="userCom" placeholder="Legg igjen en kommentar" width="200" height="100">
+						<input type="submit" id="vurdering" name="filmID" value="Send kommentar">
+					</form>
+					
+					<form action="mylist.html" method="get">
+						<input type="submit" id="vurdering" name="filmID" value="+Liste">
+					</form>
+				</div>
+
+			</section>
+		</main>
+	</div>
+
+	<div class="footer">
+		<footer>
+			<p>&copy; Institutt for Informasjons- og medievitenskap</p>
+		</footer>
+	</div>
+	<script type="text/javascript" src="v3_showmovie.js"></script>
+	<script type="text/javascript" src="query_params.js"></script>
+	<script type="text/javascript" src="object.js"></script>
+	<script type="text/javascript" src="genres.js"></script>
+	<script type="text/javascript" src="reviews.js"></script>
+</body>
+</html>

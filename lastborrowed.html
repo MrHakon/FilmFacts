@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+	<title>FilmFacts</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="v5_project.css" rel="stylesheet">
+</head>
+
+<body>
+	<header class="header">
+		<a class="headline" href="./index.html">FilmFacts</a> <!-- Benytter en URL, fremfor H1, for å vende tilbake til hovedsiden -->
+		<nav class="navigation">
+			<a href="./index.html">Hjem</a>
+			<a href="./mylist.html">Min liste</a>
+			<a href="./lastborrowed.html">Mine lån</a>
+		</nav>
+		<div class="activeUser">
+			<a href="./mylist.html">Bruker 1</a>
+			<a href="#">Logg ut</a>
+		</div>
+	</header>
+
+	<section class="search">
+		<h2>Søk etter film</h2>
+		<div class="freeSearch general">
+			<form action="./searchresult.html" class="searchbox">
+				<input type="search" name="film_title">
+				<br><br>
+				<input type="submit" name="submit" value="Søk">
+			</form>
+			<a href="./advancedSearch.html">Avansert søk</a>
+		</div>
+	</section>
+
+	<div class="mainC">
+		<main class="myBorrowedContainer">
+			<h1>Mine lån</h1>
+			<ol class="lBorrowed"> <!-- Listen hvor JavaScript plasserer innholdet -->
+				
+			</ol>
+		</main>
+	</div>
+	
+	<script type="text/javascript" src="query_params.js"></script>
+	<script type="text/javascript" src="object.js"></script>
+	<script type="text/javascript" src="v1_lastBorrowed.js"></script>
+	<div class="footer">
+		<footer>
+			<p>&copy; Institutt for Informasjons- og medievitenskap</p>
+		</footer>
+	</div>
+</body>
+</html>

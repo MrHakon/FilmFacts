@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+	<title>FilmFacts</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="v5_project.css" rel="stylesheet">
+</head>
+<!-- Beholder header-kode fra de andre HTML-dokumentene, men fjerner det generelle søkefeltet -->
+<body>
+	<header class="header">
+		<a class="headline" href="./index.html">FilmFacts</a> 
+		<nav class="navigation">
+			<a href="./index.html">Hjem</a>
+			<a href="./mylist.html">Min liste</a>
+			<a href="./lastborrowed.html">Mine lån</a>
+		</nav>
+		<div class="activeUser">
+			<a href="./mylist.html">Bruker 1</a>
+			<a href="#">Logg ut</a>
+		</div>
+	</header>
+
+	<div class="maincontain">
+		<section class="advSearch">
+			<h1>Avansert søk</h1>
+			<p>Skriv inn hele eller deler av det eller de ordene du vil søke etter.<br></p>
+
+			<form action="searchresult.html" class="searchB" method="get">
+				<fieldset>
+				<!-- Et input-felt for hvert søkeparameter. Sender verdien videre til "searchresult.html" -->
+					<legend>Avansert søk</legend>
+					<div>
+						<label for="film_title">Filmtittel:</label>
+						<input id="film_title" name="film_title" type="text" placeholder="e.g. Fight Club">
+					</div>
+					<div>
+						<label for="film_actor">Skuespiller:</label>
+						<input id="film_actor" name="film_actor" type="text" placeholder="e.g. Harrison Ford">
+					</div>
+					<div>
+						<label for="film_director">Regissør:</label>
+						<input id="film_director" name="film_director" type="text" placeholder="e.g. James Cameron">
+					</div>
+					<div>
+						<label for="film_genre">Genre:</label>
+						<input id="film_genre" name="film_genre" type="text" placeholder="e.g. Komedie">
+					</div>
+					<div>
+						<label for="film_country">Land:</label>
+						<input id="film_country" name="film_country" type="text" placeholder="e.g. France">
+					</div>
+				</fieldset>
+				<input type="submit" id="submit" value="Søk">
+			</form>
+			</section>
+		</div>
+
+		<div class="footer">
+			<footer>
+				<p>&copy; Institutt for Informasjons- og medievitenskap</p>
+			</footer>
+		</div>
+
+	</body>
+	</html>

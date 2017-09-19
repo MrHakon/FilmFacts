@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head> <!-- Setter tegnsetting til UFT-8 og viewporten til størrelsen av enheten som blir brukt-->
+	<title>FilmFacts</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="v5_project.css" rel="stylesheet"> <!-- lenker til CSS-fil -->
+</head>
+
+<body>
+	<header class="header">
+		<a class="headline" href="./index.html">FilmFacts</a> <!-- Benytter en URL, fremfor H1, for å vende tilbake til hovedsiden -->
+		<nav class="navigation"> <!-- Navigasjonsmeny som gjentas på alle sider -->
+			<a href="./index.html">Hjem</a>
+			<a href="./mylist.html">Min liste</a>
+			<a href="./lastborrowed.html">Mine lån</a>
+		</nav>
+		<div class="activeUser"> <!-- En tenkt innlogget bruker -->
+			<a href="./mylist.html">Bruker 1</a>
+			<a href="#">Logg ut</a> 
+		</div>
+	</header>
+
+	<section class="search"> <!-- Inneholder hovedsøket, gjentas på alle sider bortsett fra "Avansert søk" -->
+		<h2>Søk etter film</h2>
+		<div class="freeSearch general">
+			<form action="searchresult.html" class="searchbox" method="get"> <!-- Sender brukeren til side for søkeresultater -->
+				<input id="inputSearch" type="search" name="film_title">
+				<br><br>
+				<input id="searchButton" type="submit" name="submit" value="Søk">
+			</form>
+			<a href="./advancedSearch.html">Avansert søk</a>
+		</div>
+	</section>
+
+
+	<div class="maincontain"> <!-- Hovedbeholderen for flexbox-elementer på siden -->
+		<!-- Anbefalinger -->
+		<section class="recommendations">
+			<h1>Anbefalinger</h1>
+			<div class="recommended"> <!-- klasse for hver film under "Anbefalinger" -->
+				<div class="picAndFacts">
+					<a href="v3_showmovie.html?id=3823">The Intouchables</a> <!-- Tittel som oppfører seg som lenke til informasjonsside -->
+					<br><br>
+					<a href="v3_showmovie.html?id=3823"><img src="./Film1/The_Intouchables_3.jpg" alt="Cover photo" width="200"></a> <!-- Bilde som også lenker til informasjonsside -->
+					<p>FRA 2011.<br> 112 minutter.<br> Drama, biografi, komedie</p>
+				</div>
+				<div class="description"> <!-- Kort beskrivelse av filmens handling -->
+					<p>Den sanne historien om to menn som aldri skulle ha møtt hverandre - De Urørlige er en oppløftende komedie om vennskap, tillit og menneskelige muligheter. <br><a href="v3_showmovie.html?id=3823">Les mer</a></p> <!-- Lenke til informasjonsside -->
+				</div>
+			</div>
+			<div class="recommended">
+				<div class="picAndFacts">
+					<a href="v3_showmovie.html?id=3818">The Lunchbox</a>
+					<br><br>
+					<a class="imagelink" href="v3_showmovie.html?id=3818"><img src="./Film2/The_Lunchbox_1.jpg" alt="The Lunchbox photo" width="200"></a>
+					<p>IND 2013.<br> 105 minutter.<br> Romanse, komedie</p>
+				</div>
+				<div class="description">
+					<p>Indiske The Lunchbox er en sjelden filmperle som har begeistret et stort internasjonalt publikum med sin originalitet og varme. Filmen vant den prestisjetunge prisen Critics Week Viewers Choice Award under Cannes-festivalen i 2013. <br><a href="v3_showmovie.html?id=3818">Les mer</a> </p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Siste lånte filmer -->
+		<section class="lastBorrowed">
+			<h1>Siste lån</h1>
+			<div class="film"> <!-- Klasse for lånte filmer - Inneholder bilde og lenke til informasjonsside-->
+				<div class="picAndFacts">
+					<a href="v3_showmovie.html?id=2754">Valkyrie</a>
+					<br><br>
+					<a href="v3_showmovie.html?id=2754"><img src="./Film7/valkyrie_1.jpg" alt="Valkyrie photo" width="200"></a>
+					<p>USA 2008<br>115 minutter</p>
+				</div>
+			</div>
+			<div class="film">
+				<div class="picAndFacts">
+					<a href="v3_showmovie.html?id=3818">The Lunchbox</a>
+					<br><br>
+					<a href="v3_showmovie.html?id=3818"><img src="./Film2/The_Lunchbox_1.jpg" alt="The Lunchbox photo" width="200"></a>
+					<p>IND 2013<br>105 minutter</p>
+				</div>
+			</div>
+
+			<div class="film">
+				<div class="picAndFacts">
+					<a href="v3_showmovie.html?id=3823">The Intouchables</a>
+					<br><br>
+					<a href="v3_showmovie.html?id=3823"><img src="./Film1/The_Intouchables_3.jpg" alt="The Intouchables photo" width="200"></a>
+					<p>FRA 2011<br>112 minutter</p>
+				</div>
+			</div>
+
+			<div class="film">
+				<div class="picAndFacts">
+					<a href="v3_showmovie.html?id=1027">Monty Python and the Holy Grail</a>
+					<br><br>
+					<a href="v3_showmovie.html?id=1027"><img src="./Film4/montypythonandtheholygrail_1.jpg" alt="Monty Python photo" width="200"></a>
+					<p>GBR 1975<br>86 minutter</p>
+				</div>
+			</div>
+		</section>
+
+
+		<!-- Nye filmer -->
+		<section class="newFilms">
+			<h1>Nyeste filmer</h1>
+			<div class="newFilm"> <!-- Hver nye film tilhører denne klassen, og har en overskrift og et bilde med lenke til informasjonsside-->
+				<a href="v3_showmovie.html?id=2274">Minority Report</a>
+				<br><br>
+				<a href="v3_showmovie.html?id=2274"><img src="./Film6/Minority_Report_3.jpg" alt="Minority Report photo" width="200"></a>
+				<p>USA 2002<br>141 minutter</p>
+			</div>
+			<div class="newFilm">
+				<a href="v3_showmovie.html?id=3823">The Intouchables</a>
+				<br><br>
+				<a href="v3_showmovie.html?id=3823"><img src="./Film1/The_Intouchables_3.jpg" alt="The Intouchables photo" width="200"></a>
+				<p>FRA 2011<br>112 minutter</p>
+			</div>
+			<div class="newFilm">
+				<a href="v3_showmovie.html?id=3818">The Lunchbox</a>
+				<br><br>
+				<a href="v3_showmovie.html?id=3818"><img src="./Film2/The_Lunchbox_1.jpg" alt="The Lunchbox photo" width="200"></a>
+				<p>IND 2013<br>105 minutter</p>
+			</div>
+		</section>
+	</div>
+
+	<!-- Rutiner for lån av filmer -->
+	<section class="terms">
+		<h1>Rutiner</h1>
+		<div class="rule"> <!-- Benytter reglene fra Vindkast-nettsiden -->
+			<ol>
+				<li>Følgende kan låne: staben ved Institutt for informasjons- og medievitenskap, studenter ved instituttet, på grunnlag av faglig begrunnelse, andre ved UiB etter særlig avtale for et avgrenset tidsrom eller for et avgrenset prosjekt.</li>
+				<li>Bestillinger vil bli effektuert hver arbeidsdag mellom klokken 14:00 og 15:00.</li>
+				<li>Ansatte ved instituttet får filmen lagt i posthyllen, studenter og andre får tilbakemelding om hvor og når filmen kan hentes.</li>
+				<li>For alt utlån gjelder en generell regel om lånetid på 1 uke, som kan forlenges med ytterligere en uke. Ønskes en film lånt over en lengre periode må dette begrunnes, og hver enkelt forespørsel vil bli vurdert.</li>
+				<li>Film skal leveres tilbake i posthyllen merket <em>retur av film</em></li>
+			</ol>
+		</div>
+	</section>
+
+	<div class="footer"> <!-- Informasjons om rettighetsinnehaver - gjentas på alle sider -->
+		<footer>
+			<p>&copy; Institutt for Informasjons- og medievitenskap</p>
+		</footer>
+	</div>
+</body>
+</html>
