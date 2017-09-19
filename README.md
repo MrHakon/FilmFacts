@@ -9,18 +9,10 @@ The website also had to be built for mobile first, and then scale up to bigger s
 I have personally written these files:
 
 HTML:
-advancedSearch.html
-index.html
-lastborrowed.html
-mylist.html
-searchresult.html
-v3_showmovie.html
+advancedSearch.html, index.html, lastborrowed.html, mylist.html, searchresult.html, v3_showmovie.html
 
 JavaScript:
-v1_lastBorrowed.js
-v1_mList.js
-v2_searchResult.js
-v3_showmovie.js
+v1_lastBorrowed.js, v1_mList.js, v2_searchResult.js, v3_showmovie.js
 
 CSS:
 v5_project.css
